@@ -25,4 +25,11 @@ public class CustomerController {
         return customerService.listOfAllCustomer();
     }
 
+    @DeleteMapping("/delete/{id}")
+    public String deleteCustomerDetails(@PathVariable int id)
+    {
+        customerService.deleteCustomer(id);
+        return "Delete customer detail successfully";
+    }
+
 }
