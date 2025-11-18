@@ -25,17 +25,18 @@ public class CustomerController {
         return customerService.listOfAllCustomer();
     }
 
+    @GetMapping("get/{id}")
+    public Customer FindCustomerDetailById(@PathVariable int id)
+    {
+        return customerService.getById(id);
+    }
+
+
     @DeleteMapping("/delete/{id}")
     public String deleteCustomerDetails(@PathVariable int id)
     {
         customerService.deleteCustomer(id);
         return "Delete customer detail successfully";
-    }
-
-    @GetMapping("get/{id}")
-    public Customer FindCustomerDetailById(@PathVariable int id)
-    {
-        return customerService.getById(id);
     }
 
 }

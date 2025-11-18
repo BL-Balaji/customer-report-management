@@ -28,5 +28,6 @@ public class CustomerService {
     }
 
     public Customer getById(int id) {
+        return customerRepository.findById(id).get();
     }
 }
