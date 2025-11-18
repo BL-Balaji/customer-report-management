@@ -26,4 +26,7 @@ public class CustomerService {
     public void deleteCustomer(int id) {
         customerRepository.deleteById(id);
     }
+
+    public Customer getById(int id) {
+    }
 }

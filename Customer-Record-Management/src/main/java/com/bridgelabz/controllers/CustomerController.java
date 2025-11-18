@@ -32,4 +32,10 @@ public class CustomerController {
         return "Delete customer detail successfully";
     }
 
+    @GetMapping("get/{id}")
+    public Customer FindCustomerDetailById(@PathVariable int id)
+    {
+        return customerService.getById(id);
+    }
+
 }
